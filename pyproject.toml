@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "llm-playground"
+version = "0.1.0"
+description = "Collection of LLM applications and notebooks"
+authors = ["Hojayfa Rahman <hojayfarahman@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+python-dotenv = "^1.0.1"
+langgraph = "^0.4.8"
+langchain = "^0.3.26"
+langchain-google-genai = "^2.1.5"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+pytest-cov = "^6.1.1"
+factory-boy = "^3.3.3"
+ipykernel = "^6.29.5"
+
+[tool.pytest.ini_options]
+python_files = ["tests.py", "test_*.py", "*_tests.py"]
+addopts = ["--strict-markers", "--strict-config", "--verbose", "--tb=short"]

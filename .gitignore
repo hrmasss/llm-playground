@@ -44,3 +44,7 @@ build/
 dist/
 *.egg-info/
 *.egg
+
+# Database files
+*.sqlite3
+*.db
